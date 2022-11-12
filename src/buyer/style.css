@@ -221,31 +221,31 @@ main {
 .filterGrid label img {
   width: 50%;
 }
-input[name="grid"][value="1"]:checked ~ .product {
+main input[name="grid"][value="1"]:checked ~ .product {
   grid-template-columns: auto;
 }
-input[name="grid"][value="2"]:checked ~ .product {
+main input[name="grid"][value="2"]:checked ~ .product {
   grid-template-columns: auto auto;
 }
-input[name="grid"][value="3"]:checked ~ .product {
+main input[name="grid"][value="3"]:checked ~ .product {
   grid-template-columns: auto auto auto;
 }
-input[name="grid"][value="4"]:checked ~ .product {
+main input[name="grid"][value="4"]:checked ~ .product {
   grid-template-columns: auto auto auto auto;
 }
-input {
+main input {
   display: none;
 }
-input[name="grid"][value="1"]:checked ~ .filterGrid label[for="grid-1"] {
+main input[name="grid"][value="1"]:checked ~ .filterGrid label[for="grid-1"] {
   background-color: #ea9782;
 }
-input[name="grid"][value="2"]:checked ~ .filterGrid label[for="grid-2"] {
+main input[name="grid"][value="2"]:checked ~ .filterGrid label[for="grid-2"] {
   background-color: #ea9782;
 }
-input[name="grid"][value="3"]:checked ~ .filterGrid label[for="grid-3"] {
+main input[name="grid"][value="3"]:checked ~ .filterGrid label[for="grid-3"] {
   background-color: #ea9782;
 }
-input[name="grid"][value="4"]:checked ~ .filterGrid label[for="grid-4"] {
+main input[name="grid"][value="4"]:checked ~ .filterGrid label[for="grid-4"] {
   background-color: #ea9782;
 }
 @keyframes effectChangeGrid1 {
@@ -288,22 +288,15 @@ input[name="grid"][value="4"]:checked ~ .filterGrid label[for="grid-4"] {
     transform: translate(0, 0);
   }
 }
-input[name="grid"][value="1"]:checked ~ .product {
+main input[name="grid"][value="1"]:checked ~ .product {
   animation: effectChangeGrid1 1s ease-in-out 1 forwards;
 }
-input[name="grid"][value="2"]:checked ~ .product {
+main input[name="grid"][value="2"]:checked ~ .product {
   animation: effectChangeGrid2 1s ease-in-out 1 forwards;
 }
-input[name="grid"][value="3"]:checked ~ .product {
+main input[name="grid"][value="3"]:checked ~ .product {
   animation: effectChangeGrid3 1s ease-in-out 1 forwards;
 }
-input[name="grid"][value="4"]:checked ~ .product {
+main input[name="grid"][value="4"]:checked ~ .product {
   animation: effectChangeGrid4 1s ease-in-out 1 forwards;
-}
-/*ipad*/
-@media (max-width: 1024px) {
-}
-/*phone*/
-@media (max-width: 768px) {
-
 }
