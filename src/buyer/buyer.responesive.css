@@ -1,0 +1,20 @@
+@media (max-width: 640px) {
+}
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: auto auto;
+  }
+  :root {
+    --cart-w: 460px;
+  }
+}
+@media (min-width: 1024px) {
+  .product {
+    grid-template-columns: auto auto auto auto;
+    gap: 54px;
+  }
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+}

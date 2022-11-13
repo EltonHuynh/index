@@ -2,6 +2,9 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+:root {
+  --cart-w: 200px;
+}
 .app {
   margin: auto;
   margin-top: 10px;
@@ -120,18 +123,18 @@ main {
 }
 .product {
   display: grid;
-  grid-template-columns: auto auto auto auto;
 }
 .product .card {
   position: relative;
   margin: 10px auto;
-  width: 170px;
-  height: 170px;
+  width: var(--cart-w);
+  height: var(--cart-w);
   border-radius: 20px;
   background-color: #f5f5f5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: 8px solid #cccc;
+  border: 10px solid #cccc;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 .product .card .image img {
   position: absolute;
@@ -154,21 +157,21 @@ main {
 .product .card .show {
   position: absolute;
   z-index: 1;
-  width: 100%;
   height: 0;
-  bottom: 0;
-  left: 0;
+  width: var(--cart-w);
+  bottom: -15px;
+  left: -10px;
   border-radius: 10px;
-  overflow: hidden;
   transition: all 0.5s ease-in-out;
   background-size: cover;
   background-position: center;
   text-align: center;
+  z-index: 2;
 }
 .card:hover .show {
-  width: 100%;
+  width: var(--cart-w);
   background-color: #cccc;
-  height: 100%;
+  height: var(--cart-w);
   text-align: center;
 }
 .card .show button {
@@ -200,48 +203,11 @@ main {
   background-color: #cccc;
   color: #fff;
 }
-.filterGrid {
-  text-align: right;
-  margin-right: 40px;
-}
-.filterGrid label {
-  margin: 0 0 10px;
-  background-color: #e5e5e5;
-  display: inline-block;
-  padding: 3px;
-  width: 70px;
-  text-align: center;
-}
-.filterGrid label img {
-  width: 50%;
-}
-main input[name="grid"][value="1"]:checked ~ .product {
-  grid-template-columns: auto;
-}
-main input[name="grid"][value="2"]:checked ~ .product {
-  grid-template-columns: auto auto;
-}
-main input[name="grid"][value="3"]:checked ~ .product {
-  grid-template-columns: auto auto auto;
-}
-main input[name="grid"][value="4"]:checked ~ .product {
-  grid-template-columns: auto auto auto auto;
-}
+
 main input {
   display: none;
 }
-main input[name="grid"][value="1"]:checked ~ .filterGrid label[for="grid-1"] {
-  background-color: #ea9782;
-}
-main input[name="grid"][value="2"]:checked ~ .filterGrid label[for="grid-2"] {
-  background-color: #ea9782;
-}
-main input[name="grid"][value="3"]:checked ~ .filterGrid label[for="grid-3"] {
-  background-color: #ea9782;
-}
-main input[name="grid"][value="4"]:checked ~ .filterGrid label[for="grid-4"] {
-  background-color: #ea9782;
-}
+
 @keyframes effectChangeGrid1 {
   from {
     opacity: 0;
@@ -281,18 +247,6 @@ main input[name="grid"][value="4"]:checked ~ .filterGrid label[for="grid-4"] {
     opacity: 1;
     transform: translate(0, 0);
   }
-}
-main input[name="grid"][value="1"]:checked ~ .product {
-  animation: effectChangeGrid1 1s ease-in-out 1 forwards;
-}
-main input[name="grid"][value="2"]:checked ~ .product {
-  animation: effectChangeGrid2 1s ease-in-out 1 forwards;
-}
-main input[name="grid"][value="3"]:checked ~ .product {
-  animation: effectChangeGrid3 1s ease-in-out 1 forwards;
-}
-main input[name="grid"][value="4"]:checked ~ .product {
-  animation: effectChangeGrid4 1s ease-in-out 1 forwards;
 }
 
 @media (max-width: 1023px) {
