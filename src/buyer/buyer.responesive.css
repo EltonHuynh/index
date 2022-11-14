@@ -1,20 +1,27 @@
-@media (max-width: 640px) {
+/*Phone*/
+@media (max-width: 767px) {
+  .product {
+    grid-template-columns: auto;
+  }
+  .root {
+    --cart-w: 0px;
+  }
 }
-@media (max-width: 768px) {
+
+/*phone*/
+@media (max-width: 1024px) {
   .product {
     grid-template-columns: auto auto;
   }
   :root {
-    --cart-w: 460px;
+    --cart-w: 300px;
   }
 }
+
+/* PC */
 @media (min-width: 1024px) {
   .product {
     grid-template-columns: auto auto auto auto;
-    gap: 54px;
+    gap: 30px;
   }
-}
-@media (min-width: 1280px) {
-}
-@media (min-width: 1536px) {
 }
