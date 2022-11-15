@@ -29,10 +29,40 @@
           <div class="icon"></div>
           <div class="option">
             <button>
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-cart-shopping" id="cart-shopping"></i>
             </button>
           </div>
         </div>
+
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- Content -->
+          <div class="cart-content">
+            <div class="cart-box">
+              <img
+                src="/src/public/img/Electric_clock-removebg-preview.png"
+                alt="" />
+              <div class="cart-detail">
+                <div class="cart-product-title">Electric Clock</div>
+                <div class="cart-price">$120</div>
+                <input type="number" value="1" class="cart-quantity" />
+              </div>
+              <!-- Remove Cart -->
+              <i class="fa-solid fa-trash" id="cart-remove"></i>
+            </div>
+          </div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- Buy Button -->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-- Cart Close -->
+          <i class="fa-solid fa-x" id="cart-close"></i>
+          
+        </div>
+
       </header>
       <hr />
 
@@ -63,7 +93,7 @@
                     <li style="margin-bottom: 10px">
                       <a href="#">Price</a>
                       <hr />
-                      <hr class="price">
+                      <hr class="price" />
                       <span>$100 ~ $2000</span>
                     </li>
                     <li><a href="#">Style</a></li>
@@ -241,5 +271,7 @@
 
       <footer></footer>
     </div>
+
+    <script src="/src/buyer/main.js"></script>
   </body>
 </html>
