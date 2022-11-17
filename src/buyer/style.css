@@ -217,10 +217,10 @@ menu {
   background-color: #b5b1c5;
 }
 .category-menu .ul-category .subcategory .Fil-items .price {
-  width: 20%;
+  width: 30%;
   height: 5px;
   border-radius: 20px;
-  background-color: var(--bg-color);
+  background-color: #ea9782;
   margin-left: 15px;
   position: absolute;
   top: 22px;
